@@ -3,7 +3,7 @@ import { LoginService } from '../../../services/login.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'cli-header',
+  selector: 'alu-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {

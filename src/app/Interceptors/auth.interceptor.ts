@@ -6,11 +6,11 @@ import {
   HttpRequest,
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
-import { Observable } from 'rxjs/Rx'; // IMPORTANTE: IMPORT ATUALIZADO
 import { StorageService } from '../services/storage.service';
 import { API_CONFIG } from '../config/api.config';
-import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -25,7 +25,7 @@ export class AuthInterceptor implements HttpInterceptor {
     const requestToAPI = req.url.substring(0, N) === API_CONFIG.baseUrl;
     if (localUser && requestToAPI) {
       const authReq = req.clone({
-        headers: req.headers.set('Authorization', 'Bearer ' + localUser.token)
+        headers: req.headers.set('Authorization', 'JWT ' + localUser.token)
       });
       return next.handle(authReq);
     } else {

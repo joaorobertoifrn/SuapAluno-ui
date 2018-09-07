@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Dashboard } from '../../../models/dashboard.model';
 import { DashboardService } from '../../../services/dashboard.service';
+import { Dashboard } from '../../../Models/dashboard.model';
 
 @Component({
-  selector: 'cli-home',
+  selector: 'alu-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {

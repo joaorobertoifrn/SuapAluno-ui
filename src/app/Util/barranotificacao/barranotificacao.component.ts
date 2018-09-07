@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate} from '@angular/animations';
 
 import {NotificationService} from '../messages/notification.service';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/timer';
 import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/switchMap';
+import 'rxjs/observable/timer';
+
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'cli-barranotificacao',
+  selector: 'alu-barranotificacao',
   templateUrl: './barranotificacao.component.html',
   styleUrls: ['./barranotificacao.component.css'],
   animations: [

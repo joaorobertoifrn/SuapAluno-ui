@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cli-sidemenu',
+  selector: 'alu-sidemenu',
   templateUrl: './sidemenu.component.html'
 })
 export class SidemenuComponent implements OnInit {

@@ -1,12 +1,11 @@
 import { API_CONFIG } from '../config/api.config';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { Credenciais } from '../models/credenciais.model';
 import 'rxjs/add/operator/do';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { LocalUser } from '../models/local_user';
 import { StorageService } from './storage.service';
+import { Credenciais } from '../Models/credenciais';
 
 @Injectable()
 export class LoginService {
@@ -40,7 +39,7 @@ export class LoginService {
     const tok = authorizationValue.substring(7);
     const user: LocalUser = {
       token: tok,
-      email: this.jwtHelper.decodeToken(tok).sub
+      username: this.jwtHelper.decodeToken(tok).sub
     };
     this.storage.setLocalUser(user);
   }

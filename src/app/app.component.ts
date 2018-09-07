@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { StorageService } from './services/storage.service';
 
 @Component({
   selector: 'alu-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SuapAluno-ui';
+
+  usernameUser: string;
+
+  constructor(public storage: StorageService) { }
+
+  ngOnInit() {
+    const localUser = this.storage.getLocalUser();
+    if (localUser) {
+      this.usernameUser = localUser.username;
+    } else {
+      this.usernameUser = '';
+    }
+  }
 }

@@ -4,7 +4,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { RadioOption } from './radio-option.model';
 
 @Component({
-  selector: 'cli-radio',
+  selector: 'alu-radio',
   templateUrl: './radio.component.html',
   providers: [
     {

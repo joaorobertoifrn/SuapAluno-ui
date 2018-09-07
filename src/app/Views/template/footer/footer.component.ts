@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cli-footer',
+  selector: 'alu-footer',
   templateUrl: './footer.component.html'})
 export class FooterComponent implements OnInit {
 

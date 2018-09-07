@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ContentChild, AfterContentInit } from '@angul
 import { NgModel, FormControlName } from '@angular/forms';
 
 @Component({
-  selector: 'cli-input-container',
+  selector: 'alu-input-container',
   templateUrl: './input.component.html'
 })
 export class InputComponent implements OnInit, AfterContentInit {
