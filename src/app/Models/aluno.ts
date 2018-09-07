@@ -1,5 +1,5 @@
-import { Situacao } from '../Enums/situacao.enum';
-import { SituacaoSistemica } from '../Enums/situacao-sistemica.enum';
+import { Situacao } from './Enums/situacao.enum';
+import { SituacaoSistemica } from './Enums/situacao-sistemica.enum';
 
 export interface Aluno {
   matricula: string;
