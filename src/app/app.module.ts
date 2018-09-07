@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { AlunoComponent } from './Views/aluno/aluno.component';
 import { DashboardComponent } from './Views/dashboard/dashboard.component';
 import { PerfilComponent } from './Views/perfil/perfil.component';
+import { LoginComponent } from './Security/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlunoComponent,
     DashboardComponent,
-    PerfilComponent
+    PerfilComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule

@@ -23,9 +23,39 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"},
+              {"input":"node_modules/admin-lte/dist/css/AdminLTE.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/morris.js/morris.css"},
+              {"input":"node_modules/admin-lte/bower_components/jvectormap/jquery-jvectormap.css"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-daterangepicker/daterangepicker.css"},
+              {"input":"node_modules/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"},
+              {"input":"node_modules/admin-lte/dist/css/skins/skin-blue.min.css"}
             ],
-            "scripts": []
+            "scripts": [
+              {"input":"node_modules/admin-lte/bower_components/jquery/dist/jquery.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-ui/jquery-ui.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net/js/jquery.dataTables.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/raphael/raphael.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/morris.js/morris.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"},
+              {"input":"node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"},
+              {"input":"node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-knob/dist/jquery.knob.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/moment/min/moment.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-daterangepicker/daterangepicker.js"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"},
+              {"input":"node_modules/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js"},
+              {"input":"node_modules/admin-lte/dist/js/adminlte.min.js"},
+              {"input":"node_modules/admin-lte/dist/js/demo.js"}
+            ]
           },
           "configurations": {
             "production": {
@@ -72,9 +102,39 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"},
+              {"input":"node_modules/admin-lte/dist/css/AdminLTE.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/morris.js/morris.css"},
+              {"input":"node_modules/admin-lte/bower_components/jvectormap/jquery-jvectormap.css"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-daterangepicker/daterangepicker.css"},
+              {"input":"node_modules/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"},
+              {"input":"node_modules/admin-lte/dist/css/skins/skin-blue.min.css"}
             ],
-            "scripts": [],
+            "scripts": [
+              {"input":"node_modules/admin-lte/bower_components/jquery/dist/jquery.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-ui/jquery-ui.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net/js/jquery.dataTables.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/raphael/raphael.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/morris.js/morris.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"},
+              {"input":"node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"},
+              {"input":"node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-knob/dist/jquery.knob.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/moment/min/moment.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-daterangepicker/daterangepicker.js"},
+              {"input":"node_modules/admin-lte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"},
+              {"input":"node_modules/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"},
+              {"input":"node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js"},
+              {"input":"node_modules/admin-lte/dist/js/adminlte.min.js"},
+              {"input":"node_modules/admin-lte/dist/js/demo.js"}
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
