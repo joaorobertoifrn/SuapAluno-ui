@@ -1,4 +1,4 @@
 export const API_CONFIG = {
-    baseUrl: 'https://clinicaifrn.herokuapp.com/'
+    baseUrl: 'https://suap.ifrn.edu.br/'
     // baseUrl: 'http://localhost:8080/'
 };

@@ -9,8 +9,7 @@ export class InputComponent implements OnInit, AfterContentInit {
 
   @Input() label: string;
   @Input() errorMessage: string;
-  // tslint:disable-next-line:no-inferrable-types
-  @Input() showTip: boolean = true;
+  @Input() showTip = true;
 
   input: any;
 

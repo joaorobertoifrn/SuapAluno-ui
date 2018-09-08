@@ -5,7 +5,9 @@ import 'rxjs/add/operator/do';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { LocalUser } from '../models/local_user';
 import { StorageService } from './storage.service';
-import { Credenciais } from '../Models/credenciais';
+import { Credenciais } from '../models/credenciais';
+import { Observable } from 'rxjs';
+import { Auth } from '../models/auth';
 
 @Injectable()
 export class LoginService {
@@ -15,31 +17,21 @@ export class LoginService {
   constructor(public http: HttpClient, public storage: StorageService) {}
 
   refreshToken() {
-    return this.http.post(
-      `${API_CONFIG.baseUrl}/auth/refresh_token`,
-      {},
-      {
-        observe: 'response',
-        responseType: 'text'
-      }
-    );
+    const usuarioLogado = this.storage.getLocalUser();
+
+    return this.http.post(`${API_CONFIG.baseUrl}api/v2/autenticacao/token/refresh/`, usuarioLogado);
   }
 
-  authenticate(creds: Credenciais) {
-    return this.http.post(
-        `${API_CONFIG.baseUrl}/login`,
-        creds,
-        {
-            observe: 'response',
-            responseType: 'text'
-        });
+  authenticate(creds: Credenciais): Observable<Auth> {
+    return this.http.post<Auth>(
+        `${API_CONFIG.baseUrl}api/v2/autenticacao/token/`,
+        creds);
 }
 
   successfulLogin(authorizationValue: string) {
-    const tok = authorizationValue.substring(7);
+    const tok = authorizationValue;
     const user: LocalUser = {
-      token: tok,
-      username: this.jwtHelper.decodeToken(tok).sub
+      token: tok
     };
     this.storage.setLocalUser(user);
   }

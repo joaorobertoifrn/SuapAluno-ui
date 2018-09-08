@@ -24,9 +24,11 @@ export class AuthInterceptor implements HttpInterceptor {
     const N = API_CONFIG.baseUrl.length;
     const requestToAPI = req.url.substring(0, N) === API_CONFIG.baseUrl;
     if (localUser && requestToAPI) {
-      const authReq = req.clone({
-        headers: req.headers.set('Authorization', 'JWT ' + localUser.token)
-      });
+      const authReq = req.clone(
+        {
+          headers: req.headers.set('Content-Type', 'application/json').set('Authorization', `JWT ${localUser.token}`)
+        }
+        );
       return next.handle(authReq);
     } else {
       return next.handle(req);

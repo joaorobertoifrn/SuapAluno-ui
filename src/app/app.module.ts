@@ -2,16 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
-import { AlunoComponent } from './Views/aluno/aluno.component';
-import { DashboardComponent } from './Views/dashboard/dashboard.component';
-import { PerfilComponent } from './Views/perfil/perfil.component';
-import { LoginComponent } from './Security/login/login.component';
-import { HeaderComponent } from './Views/template/header/header.component';
-import { FooterComponent } from './Views/template/footer/footer.component';
-import { SidemenuComponent } from './Views/template/sidemenu/sidemenu.component';
-import { HomeComponent } from './Views/template/home/home.component';
+import { AlunoComponent } from './views/aluno/aluno.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
+import { LoginComponent } from './security/login/login.component';
+import { HeaderComponent } from './views/template/header/header.component';
+import { FooterComponent } from './views/template/footer/footer.component';
+import { SidemenuComponent } from './views/template/sidemenu/sidemenu.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UtilModule } from './Util/util.module';
+import { UtilModule } from './util/util.module';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     SidemenuComponent,
-    HomeComponent,
     AlunoComponent,
     DashboardComponent,
     PerfilComponent,

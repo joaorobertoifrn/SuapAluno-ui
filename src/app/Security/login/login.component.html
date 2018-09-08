@@ -1,3 +1,33 @@
-<p>
-  login works!
-</p>
+<body class="hold-transition login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <b>Projeto</b> | Login
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg">Por favor, efetue o login para continuar</p>
+
+      <form [formGroup]="loginForm" method="post">
+
+        <alu-input-container [showTip]=false>
+            <input type="text" formControlName="username" class="form-control" placeholder="Matricula">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </alu-input-container>
+
+        <alu-input-container [showTip]=false>
+            <input type="password" formControlName="password" class="form-control" placeholder="Senha">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </alu-input-container>
+
+        <div class="row">
+          <div class="col-xs-offset-8 col-xs-4">
+            <button [disabled]="loginForm.invalid" type="submit" (click)="login()" class="btn btn-primary btn-block btn-flat">Entrar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.login-box-body -->
+  </div>
+  <!-- /.login-box -->
+  </body>

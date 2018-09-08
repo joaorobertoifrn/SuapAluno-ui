@@ -7,10 +7,10 @@ import { RadioComponent } from './radio/radio.component';
 import { NotificationService } from './messages/notification.service';
 import { BarranotificacaoComponent } from './barranotificacao/barranotificacao.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from '../Interceptors/auth.interceptor';
+import { AuthInterceptor } from '../interceptors/auth.interceptor';
 import { LoginService } from '../services/login.service';
 import { StorageService } from '../services/storage.service';
-import { DashboardService } from '../Services/dashboard.service';
+import { DashboardService } from '../services/dashboard.service';
 
 @NgModule({
   declarations: [

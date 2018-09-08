@@ -6,18 +6,18 @@ import { StorageService } from './services/storage.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  usernameUser: string;
+  tokenAuth: string;
 
   constructor(public storage: StorageService) { }
 
   ngOnInit() {
     const localUser = this.storage.getLocalUser();
     if (localUser) {
-      this.usernameUser = localUser.username;
+      this.tokenAuth = localUser.token;
     } else {
-      this.usernameUser = '';
+      this.tokenAuth = '';
     }
   }
 }
