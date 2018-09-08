@@ -1,6 +1,6 @@
 import { Aluno } from './aluno';
 
-export interface Pagina {
+export interface Page {
   count: number;
   next: string;
   previous: string;

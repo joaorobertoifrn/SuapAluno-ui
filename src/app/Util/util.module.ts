@@ -12,12 +12,15 @@ import { LoginService } from '../services/login.service';
 import { StorageService } from '../services/storage.service';
 import { DashboardService } from '../services/dashboard.service';
 import { PerfilService } from '../services/perfil.service';
+import { PaginaComponent } from './pagina/pagina.component';
+import { AlunoService } from '../services/aluno.service';
 
 @NgModule({
   declarations: [
     InputComponent,
     RadioComponent,
-    BarranotificacaoComponent
+    BarranotificacaoComponent,
+    PaginaComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,8 @@ import { PerfilService } from '../services/perfil.service';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    BarranotificacaoComponent
+    BarranotificacaoComponent,
+    PaginaComponent
   ]
 })
 export class UtilModule {
@@ -43,6 +47,7 @@ export class UtilModule {
         StorageService,
         LoginService,
         PerfilService,
+        AlunoService,
         NotificationService,
         {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
       ]
