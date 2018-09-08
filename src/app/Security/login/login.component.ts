@@ -5,6 +5,8 @@ import { NotificationService } from '../../util/messages/notification.service';
 import { Router } from '@angular/router';
 import { Credenciais } from '../../models/credenciais';
 import { StorageService } from '../../services/storage.service';
+import { PerfilService } from '../../services/perfil.service';
+import { Perfil } from '../../models/perfil';
 
 
 @Component({
@@ -13,6 +15,8 @@ import { StorageService } from '../../services/storage.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  public perfilUsuario: Perfil;
 
   loginForm: FormGroup;
 
@@ -26,7 +30,8 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private notificationService: NotificationService,
     public auth: LoginService,
-    public storage: StorageService
+    public storage: StorageService,
+    public perfilService: PerfilService
   ) { }
 
   ngOnInit() {
@@ -41,7 +46,10 @@ export class LoginComponent implements OnInit {
         this.auth.successfulLogin(localUser.token);
         this.router.navigate(['/']);
       },
-      error => {this.router.navigate(['/login']); });
+      error => {
+        this.notificationService.notify('Falha ao atualizar o token : ' + error);
+        this.router.navigate(['/login']);
+      });
     } else {
       this.router.navigate(['/login']);
     }
@@ -53,9 +61,18 @@ export class LoginComponent implements OnInit {
     this.auth.authenticate(this.creds)
     .subscribe(response => {
       this.auth.successfulLogin(response.token);
-      this.notificationService.notify(`Bem vindo`);
+      this.loadPerfil();
+      this.notificationService.notify(`Bem vindo ${this.perfilUsuario.nome_usual}`);
       this.router.navigate(['/']);
     },
     error => {this.notificationService.notify('Falha de Login : ' + error); });
+  }
+
+  loadPerfil() {
+    this.perfilService.getPerfil().subscribe(
+      response => {
+        this.perfilUsuario = response;
+      },
+      error => {this.notificationService.notify('Falha ao Carregar Perfil : ' + error); });
   }
 }

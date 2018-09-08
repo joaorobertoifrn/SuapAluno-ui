@@ -11,6 +11,7 @@ import { AuthInterceptor } from '../interceptors/auth.interceptor';
 import { LoginService } from '../services/login.service';
 import { StorageService } from '../services/storage.service';
 import { DashboardService } from '../services/dashboard.service';
+import { PerfilService } from '../services/perfil.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ export class UtilModule {
         DashboardService,
         StorageService,
         LoginService,
+        PerfilService,
         NotificationService,
         {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
       ]

@@ -4,7 +4,7 @@
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>IFRN</b></span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>Agenda</b> Médica</span>
+    <span class="logo-lg"><b>Suap</b> IFRN</span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">
@@ -18,17 +18,17 @@
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="assets/img/avatar5.png" class="user-image" alt="User Image">
+            <img src={{perfilUsuario?.url_foto_75x100}} class="user-image" alt="User Image">
             <span class="hidden-xs">Usuario</span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
-              <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">
+              <img src={{perfilUsuario?.url_foto_75x100}} class="img-circle" alt="User Image">
 
               <p>
-                Usuario - Web Developer
-                <small>Member since Nov. 2012</small>
+                {{perfilUsuario?.nome_usual}} - {{perfilUsuario?.tipo_vinculo}}
+                <small>{{perfilUsuario?.vinculo.curso}}</small>
               </p>
             </li>
             <!-- Menu Footer-->
